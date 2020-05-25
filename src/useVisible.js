@@ -15,7 +15,7 @@ function useVisible(initialIsVisible) {
     return () => {
       document.removeEventListener('click', handleClickOutside, true);
     };
-  });
+  }, []);
 
   return { ref, isVisible, setIsVisible };
 }
